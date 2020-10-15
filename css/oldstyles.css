@@ -1,0 +1,79 @@
+/* color palette:
+navy: #22333B 
+light blue: #6492A6
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "hero-banner"
+    "jackets"
+    "newcomers"
+    "footer";
+}
+
+/* header */
+
+header {
+  display: flex;
+  border: solid 2px red;
+}
+
+.sub-menu {
+  width: 100%;
+  border: solid 1px fuchsia;
+}
+
+.nav__row {
+  width: 100%;
+  border: solid 1px green;
+}
+
+.nav__left {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.nav__right {
+  width: 50%;
+  justify-content: flex-end;
+}
+
+/* hero-banner */
+
+.hero-banner {
+  grid-area: hero-banner;
+  height: 100px;
+  border: solid 1px black;
+}
+
+/* jackets */
+
+.jackets {
+  grid-area: jackets;
+  height: 250px;
+  border: solid 1px aqua;
+}
+
+/* newcomers */
+
+.newcomers {
+  grid-area: newcomers;
+  height: 150px;
+  border: solid 1px purple;
+}
+
+/* footer */
+
+footer {
+  grid-area: footer;
+  height: 100px;
+  border: solid 1px brown;
+}

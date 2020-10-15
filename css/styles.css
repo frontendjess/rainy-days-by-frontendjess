@@ -1,0 +1,125 @@
+/* color palette:
+navy: #22333B 
+light blue: #6492A6
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* header */
+
+header {
+  display: flex;
+  border: solid 2px red;
+}
+
+.sub-menu {
+  width: 100%;
+  border: solid 1px fuchsia;
+}
+
+.nav__row {
+  width: 100%;
+  border: solid 1px green;
+}
+
+.nav__left {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.nav__right {
+  width: 50%;
+  justify-content: flex-end;
+}
+
+/* main grid */
+
+main {
+  grid-area: main;
+  background-color: pink;
+  border: solid 1px pink;
+  height: 300px;
+}
+
+/* main flexbox */
+
+.hero-banner {
+  display: flex;
+  background-color: skyblue;
+  height: 150px;
+  justify-content: flex-end;
+}
+
+.hero-banner--text {
+  margin-top: 25px;
+}
+
+.jackets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jackets--mens {
+  width: 33%;
+}
+
+.jackets--womens {
+  width: 33%;
+}
+
+.jackets--kids {
+  width: 33%;
+}
+
+.jackets__button {
+  width: 100%;
+}
+
+.bestsellers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bestsellers--mens {
+  display: flex;
+  justify-items: flex-end;
+  width: 33%;
+  height: 200px;
+  background-color: thistle;
+}
+
+.bestsellers--womens {
+  width: 33%;
+  height: 100px;
+  background-color: cadetblue;
+}
+
+.bestsellers--kids {
+  width: 33%;
+  height: 100px;
+  background-color: coral;
+}
+
+.bestsellers__button {
+  width: 100%;
+}
+
+/* footer */
+
+footer {
+  grid-area: footer;
+  height: 100px;
+  border: solid 1px brown;
+}
