@@ -2,6 +2,8 @@
 navy: #22333B 
 light blue: #6492A6
 light gray: #F2F4F3
+dark brown: #5E503F
+light brown: #A9927D
 
 fonts: 
 archivo: font-family: 'Archivo', sans-serif;
@@ -17,6 +19,7 @@ montserrat: font-family: 'Montserrat', sans-serif;
 }
 
 body {
+  width: 100%;
 }
 
 /* header */
@@ -163,20 +166,61 @@ main {
 }
 
 .newcomers__heading {
+  grid-area: newcomers__heading;
   display: flex;
   width: 100%;
-  border: solid 1px violet;
 }
 
 .newcomers__heading--h1 {
   width: 100%;
-  background-color: #22333b;
-  border: solid 1px red;
+  background-color: #a9927d;
+}
+
+h1 {
+  color: #f2f4f3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
 }
 
 .newcomers {
   grid-area: newcomers;
   display: flex;
+}
+
+.newcomers--men {
+  width: 25%;
+}
+
+.newcomers--men__img {
+  width: 100%;
+}
+
+.newcomers--women {
+  width: 25%;
+}
+
+.newcomers--women__img {
+  width: 100%;
+}
+
+.newcomers--mini {
+  width: 25%;
+}
+
+.newcomers--mini__img {
+  width: 100%;
+}
+
+.newcomers--junior {
+  width: 25%;
+}
+
+.newcomers--junior__img {
+  width: 100%;
 }
 
 /* footer */
