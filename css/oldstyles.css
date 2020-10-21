@@ -1,7 +1,16 @@
 /* color palette:
 navy: #22333B 
 light blue: #6492A6
+light gray: #F2F4F3
+dark brown: #5E503F
+light brown: #A9927D
+
+fonts: 
+archivo: font-family: 'Archivo', sans-serif;
+montserrat: font-family: 'Montserrat', sans-serif;
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Montserrat:wght@400;600&display=swap");
 
 * {
   margin: 0;
@@ -10,11 +19,7 @@ light blue: #6492A6
 }
 
 body {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  width: 100%;
 }
 
 /* header */
@@ -47,18 +52,29 @@ header {
 /* main grid */
 
 main {
-  grid-area: main;
-  background-color: pink;
-  border: solid 1px pink;
+  display: grid;
+  grid-template-areas:
+    "hero-banner hero-banner hero-banner hero-banner"
+    "jackets jackets jackets jackets"
+    "bestsellers bestsellers bestsellers bestsellers"
+    "newcomers__heading newcomers__heading newcomers__heading newcomers__heading"
+    "newcomers newcomers newcomers newcomers";
+  background-color: #ffffff;
   height: 100%;
+  grid-row-gap: 0.5rem;
 }
 
 /* main flexbox */
 
 .hero-banner {
+  grid-area: hero-banner;
+  background-image: url("../img/hero-banner@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
   display: flex;
   background-color: skyblue;
-  height: 150px;
   justify-content: flex-end;
 }
 
@@ -67,6 +83,7 @@ main {
 }
 
 .jackets {
+  grid-area: jackets;
   display: flex;
   justify-content: space-between;
 }
@@ -85,41 +102,126 @@ main {
 
 .jackets__button {
   width: 100%;
+  background-color: #22333b;
+  padding: 15px 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #f2f4f3;
+  text-transform: uppercase;
+  border: none;
 }
 
 .bestsellers {
+  grid-area: bestsellers;
   display: flex;
   justify-content: space-between;
-  height: 600px;
+  height: 690px;
 }
 
 .bestsellers--mens {
   background-image: url("../img/men@2x.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-items: flex-end;
+  justify-content: center;
   width: 33%;
-  border: solid 1px brown;
   background-color: thistle;
 }
 
 .bestsellers--womens {
+  background-image: url("../img/woman@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-items: flex-end;
+  justify-content: center;
   width: 33%;
-  height: 100px;
   background-color: cadetblue;
 }
 
 .bestsellers--kids {
+  background-image: url("../img/kids@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 33%;
-  height: 100px;
+  display: flex;
+  justify-items: flex-end;
+  justify-content: center;
   background-color: coral;
 }
 
 .bestsellers__button {
-  width: 100%;
-  height: 10%;
+  width: 60%;
   align-self: flex-end;
+  padding: 15px 0;
+  margin-bottom: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #22333b;
+  background-color: #f2f4f3;
+  border: none;
+}
+
+.newcomers__heading {
+  grid-area: newcomers__heading;
+  display: flex;
+  width: 100%;
+}
+
+.newcomers__heading--h1 {
+  width: 100%;
+  background-color: #a9927d;
+}
+
+h1 {
+  color: #f2f4f3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
+}
+
+.newcomers {
+  grid-area: newcomers;
+  display: flex;
+}
+
+.newcomers--men {
+  width: 25%;
+}
+
+.newcomers--men__img {
+  width: 100%;
+}
+
+.newcomers--women {
+  width: 25%;
+}
+
+.newcomers--women__img {
+  width: 100%;
+}
+
+.newcomers--mini {
+  width: 25%;
+}
+
+.newcomers--mini__img {
+  width: 100%;
+}
+
+.newcomers--junior {
+  width: 25%;
+}
+
+.newcomers--junior__img {
+  width: 100%;
 }
 
 /* footer */
